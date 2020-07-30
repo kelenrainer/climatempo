@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta content="" name="description">
+
+    <title>HG Weather JS</title>
+
+    <script src="https://api.hgbrasil.com/weather?key=901dc8c1" type="text/javascript"></script>
+
+<style type="text/css" media="screen">
+/* CSS reset */
+*, *:before, *:after { 
+  margin:0;
+  padding:0;
+  font-family: Arial,sans-serif;
+}
+
+body{
+  margin: 60px;
+}
+
+h1{
+  font-size: 48px;
+  color: #066a75;
+  padding: 10px 0;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.hg-weather{
+  text-align: center;
+}
+
+</style>
+
+  </head>
+
+  <body>
+    <h1>Clima Tempo</h1>
+
+    <div class="hg-weather" data-key="development" data-woeid="455827">
+      <span data-weather="message">Obtendo...<br></span>
+
+      <span data-weather="city">Obtendo cidade</span> <span data-weather="temp">00</span>º C<br>
+      <span data-weather="description">Obtendo tempo...</span><br>
+      Nascer do Sol: <span data-weather="sunrise">00:00</span> - Pôr do Sol: <span data-weather="sunset">00:00</span><br>
+      Velocidade do vento: <span data-weather="wind_speedy">-- km/h</span><br>
+      <img src="http://assets.api.hgbrasil.com/weather/images/44.png" data-weather="image"><br>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        HGWeather.initialize();
+      });
+    </script>
+  </body>
+</html>
